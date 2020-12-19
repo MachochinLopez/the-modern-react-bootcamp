@@ -1,0 +1,14 @@
+.Cell {
+  height: 100px;
+  width: 100px;
+  background-color: darkgray;
+}
+
+.Cell-lit {
+  background-color: white;
+}
+
+td:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
