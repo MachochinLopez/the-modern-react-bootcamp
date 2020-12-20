@@ -1,0 +1,24 @@
+.TodoList {
+  background-color: #fe5b5d;
+  display: block;
+  margin: 40px auto 0;
+  color: white;
+  min-width: 400px;
+}
+
+.TodoList-title {
+  text-align: left;
+  padding: 0 40px;
+  margin-bottom: 25px;
+}
+
+.TodoList-title h1 {
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+.TodoList-title p {
+  margin-top: 0;
+  padding-bottom: 5px;
+  border-bottom: solid 3px #ff6b6a;
+}

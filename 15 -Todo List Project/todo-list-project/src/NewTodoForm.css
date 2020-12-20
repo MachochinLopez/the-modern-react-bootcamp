@@ -1,0 +1,44 @@
+.NewTodoForm {
+  padding: 0 40px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.NewTodoForm label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.NewTodoForm-input {
+  display: flex;
+  justify-content: space-between;
+}
+
+.NewTodoForm-input input {
+  border: none;
+  padding: 10px 15px;
+  font-size: 8pt;
+  width: 100%;
+}
+
+.NewTodoForm-input button {
+  border: solid 3px #ff6b6a;
+  margin-left: 5px;
+  padding: 10px 15px;
+  background-color: #fe5b5d;
+  color: white;
+  font-size: 8pt;
+  font-weight: bold;
+  min-width: 100px;
+}
+
+.NewTodoForm-input button:hover {
+  background-color: #f77072;
+  cursor: pointer;
+  color: white;
+  font-size: 8pt;
+  font-weight: bold;
+  min-width: 100px;
+}
