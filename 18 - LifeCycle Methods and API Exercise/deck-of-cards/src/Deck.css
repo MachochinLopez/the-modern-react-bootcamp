@@ -1,0 +1,32 @@
+.Deck {
+  text-align: center;
+}
+
+.Deck-title {
+  margin: 0;
+  padding: 10px;
+  color: white;
+}
+
+.Deck-button {
+  background-color: #44a648;
+  color: white;
+  padding: 10px 30px;
+  border: none;
+}
+
+.Deck-button:hover {
+  cursor: pointer;
+  background-color: #55ad58;
+}
+
+.Deck-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+
+.Deck-cards img {
+  position: absolute;
+}
