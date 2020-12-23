@@ -1,0 +1,19 @@
+html,
+body {
+  background-color: #b3e5fc;
+  height: 100%;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    #f06292,
+    #f06292 50%,
+    transparent 50%,
+    transparent 100%
+  );
+}
+
+.App {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
