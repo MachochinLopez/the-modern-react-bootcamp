@@ -1,16 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
+// Context
+import { DispatchContext } from './contexts/todos.context';
 // Helpers
 import useInputState from './hooks/useInputState';
 // Material UI
 import Paper from '@material-ui/core/Paper';
 import TextField from '@material-ui/core/TextField';
 
-export default function TodoForm({ addTodo }) {
+export default function TodoForm() {
   const [value, handleChange, reset] = useInputState("");
-  
+  const dispatch = useContext(DispatchContext);
+
   const handleSubmit = e => {
     e.preventDefault();
-    addTodo(value);
+    dispatch({ type: "ADD", task: value });
     reset();
   };
 

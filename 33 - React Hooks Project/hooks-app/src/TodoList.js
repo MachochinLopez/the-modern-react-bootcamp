@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
+// Context
+import { TodosContext } from './contexts/todos.context';
 // My Components
 import Todo from './Todo';
 // Material UI
 import List from '@material-ui/core/List';
 import Paper from '@material-ui/core/Paper';
 
-export default function TodoList({ editTodo, removeTodo, todos, toggleTodo }) {
+export default function TodoList() {
+  const todos = useContext(TodosContext);
   if (todos.length) return (
     <Paper>
       <List>
@@ -13,11 +16,8 @@ export default function TodoList({ editTodo, removeTodo, todos, toggleTodo }) {
           const { id } = todo;
           return (
             <Todo
-              editTodo={editTodo}
               isLast={index < todos.length - 1}
               key={id}
-              removeTodo={removeTodo}
-              toggleTodo={toggleTodo}
               {...todo}
             />
           );

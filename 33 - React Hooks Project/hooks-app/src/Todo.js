@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { memo, useContext } from 'react';
+// Context
+import { DispatchContext } from './contexts/todos.context';
 // My Components
 import EditTodoForm from './EditTodoForm';
 // My Hooks
@@ -12,16 +14,17 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
 import ListItemText from '@material-ui/core/ListItemText';
 
-export default function Todo({ completed, id, isLast, editTodo, removeTodo, task, toggleTodo }) {
+function Todo({ completed, id, isLast, task }) {
 
+  const dispatch = useContext(DispatchContext);
   const [isEditing, toggleIsEditing] = useToggleState(false);
 
   const handleDelete = () => {
-    removeTodo(id);
+    dispatch({ type: "REMOVE", id });
   };
 
   const handleToggle = () => {
-    toggleTodo(id);
+    dispatch({ type: "TOGGLE", id });
   };
 
   return (
@@ -30,7 +33,6 @@ export default function Todo({ completed, id, isLast, editTodo, removeTodo, task
         isEditing 
         ? <EditTodoForm
             id={id}
-            editTodo={editTodo} 
             task={task}
             toggleIsEditing={toggleIsEditing}
           />
@@ -60,3 +62,5 @@ export default function Todo({ completed, id, isLast, editTodo, removeTodo, task
     </ListItem>
   );
 };
+
+export default memo(Todo);
